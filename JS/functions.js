@@ -63,3 +63,79 @@ var divi= number_one / number_two;
 
 
 // módulo 
+
+
+
+// OPERADORES LÓGICOS Y ESTRUCTURAS CONDICIONALES 
+// AND && con if 
+var bool = false;
+var numeric = 5;
+if (!bool && numeric == "5"){ //practicar parametros en programación 
+    console.log("Ingresa if: " + bool);
+}
+else{
+    console.log("Ingresa else" + bool);
+}
+//OR || con if 
+var age = 31;
+if (age==31 || numeric=="5"){
+    console.log("Ingresa if: " + bool);
+    age++;
+}
+else{
+    console.log("Ingresa else: " + bool);
+    age--;
+}
+console.log(age);
+
+// FOR
+console.log(array_tex.length)
+for(let i=0; i<array_tex.length; i++){ //poner i<=7 no nos sirve de nada y para no poner i<7 solamente ponemos en lenght 
+    console.log(array_tex[i] + (i+1)); //jugar con la variable que incrementa, por eso el i dentro de los []
+}
+console.log ("WHILE");
+
+//WHILE Acordate que los tres pasos son: inicialización, comparación, contador 
+let j=0;
+while(j<array_tex.length){
+    console.log(array_tex[j] + (j+1));
+    j++;
+} 
+
+// DO WHILE 
+do{
+    console.log(array_tex[w] + (w+1));
+    w++;
+}while(w<array_tex.length)
+
+// CREAR FUNCIONES (crear un evento con una función y controlar la experiencia de un usuario)
+function load_page(){
+    alert("Bienvenido a mi sitio web")
+}
+
+var color="#fff"
+function change_color(){
+    document.body.style.backgroundColor="red";
+    document.body.style.color="red"; //dentro de comillas porque eso lo sabe css no js
+    document.body.style.color=color;
+}
+const btn_clear=document.querySelector("#limpiar")
+btn_clear.addEventListener("click", ()=>{
+    document.body.style.backgroundColor="white";
+    document.body.style.color="#000";
+});
+
+// FORMULARIO DE REGISTRO 
+const form_register = document.getElementById("form_register");
+const nombres       = document.getElementById("nombres");
+const apellidos     = document.getElementById("apellidos");
+const validation    = document.getElementById("validation");
+
+form_register.addEventListener("submit", hola_evenname =>{
+    hola_evenname.preventDefault();
+    let info = "";
+    if (nombres.ariaValueMax.length <= 2 || apellidos.ariaValueMax.length)
+})
+
+
+nombres.value = "ygfytc";

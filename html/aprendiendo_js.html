@@ -8,10 +8,30 @@
 
     </style>
 </head>
-<body>
+<body onload="load_page()">
 
     <label for="" id="text_one"></label>
     <label for="" id="text_two"></label>
+
+    <button onclick="change_color()">CAMBIAR COLOR</button>
+    <button id="limpiar">RESTAURAR COLORES</button>
+
+    <form id="form_register" autocomplete="off" >
+        <label for="">Nombres</label>
+        <input type="text" id="nombres" size="30" placeholder="Escriba sus nombres aquí">
+        <br>
+        <label for="">Apellidos</label>
+        <input type="text" id="apellidos" size="30" placeholder="Escriba sus apellidos aquí">
+        <br>
+        <button type="submit">REGISTRARSE</button> 
+        <button type="reset">LIMPIAR</button>
+        <br>
+        <p id="validation"></p>
+
+
+
+    </form>
+    <br><br>
 
     <script src="../JS/jquery-3.7.1.js"></script>
     <script src="../JS/jquery-3.7.1.min.js"></script>
