@@ -125,7 +125,7 @@ btn_clear.addEventListener("click", ()=>{
     document.body.style.color="#000";
 });
 
-// FORMULARIO DE REGISTRO 
+// EJERCICIO FORMULARIO DE REGISTRO 
 const form_register = document.getElementById("form_register");
 const nombres       = document.getElementById("nombres");
 const apellidos     = document.getElementById("apellidos");
@@ -137,5 +137,46 @@ form_register.addEventListener("submit", hola_evenname =>{
     if (nombres.ariaValueMax.length <= 2 || apellidos.ariaValueMax.length)
 })
 
+function validate(){  //ejercicios tipo parcial
+    alert("FUNCIONA");
+    let nombres=document.getElementById("nombres").value;
+    console.log(nombres.length);
+    if (nombres.length>2){
+        document.getElementById("apellidos").disabled=false;
+        document.getElementById("apellidos").focus();
+        nombres.value=""; //evito dar vueltas poniendo ese "" ahí
+        alert(nombres.toUpperCse()); //para mayúsculas 
+        alert(nombres.toLowerCase()); //para minusculas 
+        alert (nombres.concat("Andrea")); //método de concatenación (para no usar el + y ya)
+        alert(nombres.charAt()); //convierte en un array, y si tengo un ejercicio que me pida la posición de cierta letra tengo que poner el número dentro del parentesis del charAt
+        alert(nombres.indexOf('a'));
+        alert(nombres.split("")); //para convertir un nombre en array 
+    }
+}
+
+//si quiero acceder al id simplemente pongo id: 
+//function validate(){  //ejercicios tipo parcial
+    alert("FUNCIONA");
+    let nombres=document.getElementById("nombres").id; //aquí
+    console.log(nombres.length);
+//}//
+
+
+
+
+
 
 nombres.value = "ygfytc";
+
+
+
+// EJERCICIO DE LAS FECHAS 
+function load_page(){
+    let date=new Date();
+    console.log(date.getFullYear());
+
+
+    for (let a=0; a<array_mul.length; a++){ //esto es para lo de array multidimensional, practicalo, busca cuando uno quiera poner el nombre y la edad al mismo tiempo (entrar al .age)
+        console.log(array_mul[a].name.age); //esto es lo del age 
+    }
+}
