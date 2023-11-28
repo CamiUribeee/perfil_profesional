@@ -129,54 +129,54 @@ btn_clear.addEventListener("click", ()=>{
 const form_register = document.getElementById("form_register");
 const nombres       = document.getElementById("nombres");
 const apellidos     = document.getElementById("apellidos");
-const validation    = document.getElementById("validation");
+const information   = document.getElementById("information");
 
-form_register.addEventListener("submit", hola_evenname =>{
-    hola_evenname.preventDefault();
-    let info = "";
-    if (nombres.ariaValueMax.length <= 2 || apellidos.ariaValueMax.length)
-})
+form_register.addEventListener("submit", name_event => {
+    name_event.preventDefault();
+    let info = ""
+    if(nombres.value.length <=2 || apellidos.value.length <3 ){
+        info += "Nombres y apellidos deben ser mayores o iguales a 3 caracteres"
+        information.style.color = "red"
+    }
+    else{
+        alert("INFORMACIÓN CORRECTAMENTE")
+    }
+    information.innerText = info;
+    // information.innerText == "HOLA"
+});
 
-function validate(){  //ejercicios tipo parcial
-    alert("FUNCIONA");
-    let nombres=document.getElementById("nombres").value;
-    console.log(nombres.length);
-    if (nombres.length>2){
-        document.getElementById("apellidos").disabled=false;
-        document.getElementById("apellidos").focus();
-        nombres.value=""; //evito dar vueltas poniendo ese "" ahí
-        alert(nombres.toUpperCse()); //para mayúsculas 
-        alert(nombres.toLowerCase()); //para minusculas 
-        alert (nombres.concat("Andrea")); //método de concatenación (para no usar el + y ya)
-        alert(nombres.charAt()); //convierte en un array, y si tengo un ejercicio que me pida la posición de cierta letra tengo que poner el número dentro del parentesis del charAt
-        alert(nombres.indexOf('a'));
-        alert(nombres.split("")); //para convertir un nombre en array 
+function accion(){
+    let accion = document.getElementById("accion");
+    if(accion.value.length == 0){
+        accion.style.backgroundColor = "red";
+    }
+    else{
+        accion.style.backgroundColor = "green";
     }
 }
 
-//si quiero acceder al id simplemente pongo id: 
-//function validate(){  //ejercicios tipo parcial
-    alert("FUNCIONA");
-    let nombres=document.getElementById("nombres").id; //aquí
-    console.log(nombres.length);
-//}//
-
-
-
-
-
-
-nombres.value = "ygfytc";
-
-
-
-// EJERCICIO DE LAS FECHAS 
 function load_page(){
-    let date=new Date();
+    document.getElementById("nombres").focus();
+    document.getElementById("apellidos").disabled = true;
+    let date = new Date();
     console.log(date.getFullYear());
 
-
-    for (let a=0; a<array_mul.length; a++){ //esto es para lo de array multidimensional, practicalo, busca cuando uno quiera poner el nombre y la edad al mismo tiempo (entrar al .age)
-        console.log(array_mul[a].name.age); //esto es lo del age 
+    for(let a=0;a<array_mul.length;a++){
+        console.log(array_mul[a].name);
     }
+}
+
+function validate(){
+    let nombres = document.getElementById("nombres").value;
+    console.log(nombres.length);
+    if(nombres.length > 2){
+        document.getElementById("apellidos").disabled = false;
+        document.getElementById("apellidos").focus(); 
+        alert(nombres.split(""));      
+    }
+
+}
+
+function limpiar(){
+    let nombres = document.getElementById("nombres").value;
 }
